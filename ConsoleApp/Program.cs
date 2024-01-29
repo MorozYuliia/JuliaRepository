@@ -20,8 +20,17 @@ Console.WriteLine(myLongNumber);
 Console.WriteLine(myFloat);
 Console.WriteLine(myDouble);
 Console.WriteLine(myDecimal);
-
 Console.WriteLine("Calculations");
+Console.WriteLine(myShort + myByteNumber);
+Console.WriteLine(myIntNumber - myByteNumber);
+Console.WriteLine(myFloat * myDouble);
+Console.WriteLine(myLongNumber / myDecimal);
+
+
+
+
+
+Console.WriteLine("Math operations");
 int x = 42;
 int y = 16;
 Console.WriteLine(-6*x^3+5*x^2-10*x+15);

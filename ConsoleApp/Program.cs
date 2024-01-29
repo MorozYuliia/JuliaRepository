@@ -21,4 +21,14 @@ Console.WriteLine(myFloat);
 Console.WriteLine(myDouble);
 Console.WriteLine(myDecimal);
 
+Console.WriteLine("Calculations");
+int x = 42;
+int y = 16;
+Console.WriteLine(-6*x^3+5*x^2-10*x+15);
+Console.WriteLine(Math.Abs(x)*Math.Sin(x));
+Console.WriteLine(2*Math.PI*x);
+Console.WriteLine(Math.Max(x,y));
+
+
+
 

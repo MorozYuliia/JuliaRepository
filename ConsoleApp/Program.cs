@@ -27,9 +27,6 @@ Console.WriteLine(myFloat * myDouble);
 Console.WriteLine(myLongNumber / myDecimal);
 
 
-
-
-
 Console.WriteLine("Math operations");
 int x = 42;
 int y = 16;
@@ -38,6 +35,16 @@ Console.WriteLine(Math.Abs(x)*Math.Sin(x));
 Console.WriteLine(2*Math.PI*x);
 Console.WriteLine(Math.Max(x,y));
 
+Console.WriteLine("Extra with Dates");
+var now = DateTime.Now;
+var newYear2024 = new DateTime(2024,01,01);
+var newYear2025 = new DateTime(2025,01,01);
+var passedFromNY = now - newYear2024;
+var passedFromNYInDays = passedFromNY.Days;
+var leftToNY = newYear2025 - now;
+var leftToNYInDays = leftToNY.Days;
+Console.WriteLine($"PassedFromNYInDays: {passedFromNYInDays}");
+Console.WriteLine($"LeftToNYInDays: {leftToNYInDays}");
 
 
 

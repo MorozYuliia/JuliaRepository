@@ -13,13 +13,16 @@
             secondValue = result;
         };
         Console.WriteLine($"{N}-е Фібаначчі число це: {result}");
-
+        Console.WriteLine("MaxValues");
         Console.WriteLine(MaxValue(5, 1));
         Console.WriteLine(MaxValue(3, 15, 7));
         Console.WriteLine(MaxValue(5, 5, 7, 7));
+        Console.WriteLine("MinValues");
+        Console.WriteLine(MinValue(17, 9));
+        Console.WriteLine(MinValue(6, 62, 47));
+        Console.WriteLine(MinValue(35, 43, 91, 75));
 
     }
-    
         // First Max Method
         static int MaxValue(int a, int b)
         {
@@ -88,4 +91,73 @@
             }
             return result;
         }
+        // First Min Method
+        static int MinValue(int a, int b)
+        {
+            int result = 0;
+            if (a < b)
+            {
+                result = a;
+            }
+            else if (b < a)
+            {
+                result = b;
+            }
+            else if (b == a)
+            {
+                result = a;
+            }
+            return result;
+        }
+
+        // Second Min Method
+        static int MinValue(int a, int b, int c)
+        {
+            int result = 0;
+            if (a <= b && a <= c)
+            {
+                result = a;
+            }
+            else if (b <= a && b <= c)
+            {
+                result = b;
+            }
+            else if (c <= a && c <= b)
+            {
+                result = c;
+            }
+            else if (a == b && b == c)
+            {
+                result = a;
+            }
+            return result;
+        }
+
+        // Third Min Method
+        static int MinValue(int a, int b, int c, int d)
+        {
+            int result = 0;
+            if (a <= b && a <= c && a <= d)
+            {
+                result = a;
+            }
+            else if (b <= a && b <= c && b <= d)
+            {
+                result = b;
+            }
+            else if (c <= a && c <= b && c <= d)
+            {
+                result = c;
+            }
+            else if (d <= a && d <= b && d <= c)
+            {
+                result = d;
+            }
+            else if (a == b && b == c && c == d)
+            {
+                result = a;
+            }
+            return result;
+        }
 }
+

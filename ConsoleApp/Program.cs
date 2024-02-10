@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using System.Xml.Linq;
+using Microsoft.VisualBasic;
 
 internal class Program
 {
@@ -27,6 +28,8 @@ internal class Program
          int sum = 0;
          bool success = TrySumIfOdd(17, 10, out sum);
         Console.WriteLine($"Success: {success}, sum: {sum}");
+        Console.WriteLine("RepeatFunction");
+        Console.WriteLine(RepeatFunction ("a", 5));
     }
         // First Max Method
         static int MaxValue(int a, int b)
@@ -170,6 +173,26 @@ internal class Program
                  sum = a + b;
                 return true;
             }
+        }
+        // Method Repeat
+        static string RepeatFunction (string X, int N) {
+            bool resultInputN;
+            string result = "a";
+            Console.WriteLine("Введіть слово");
+            X = Console.ReadLine();
+            Console.WriteLine("Введіть кількість повторень");
+            var inputN = Console.ReadLine();
+            resultInputN = int.TryParse(inputN, out N);
+            if (resultInputN == false) {
+            Console.WriteLine("Введіть число");
+             result = "Fail!!!!!";
+            return result;
+            }
+            else if (resultInputN == true) {
+            result = string.Concat(Enumerable.Repeat(X, N));
+            return result;
+            }
+            return result;
         }
 }
 

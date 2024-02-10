@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using Microsoft.VisualBasic;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -21,7 +23,10 @@
         Console.WriteLine(MinValue(17, 9));
         Console.WriteLine(MinValue(6, 62, 47));
         Console.WriteLine(MinValue(35, 43, 91, 75));
-
+        Console.WriteLine("TrySumIfOdd");
+         int sum = 0;
+         bool success = TrySumIfOdd(17, 10, out sum);
+        Console.WriteLine($"Success: {success}, sum: {sum}");
     }
         // First Max Method
         static int MaxValue(int a, int b)
@@ -41,7 +46,6 @@
             }
             return result;
         }
-
         // Second Max Method
         static int MaxValue(int a, int b, int c)
         {
@@ -64,7 +68,6 @@
             }
             return result;
         }
-
         // Third Max Method
         static int MaxValue(int a, int b, int c, int d)
         {
@@ -109,7 +112,6 @@
             }
             return result;
         }
-
         // Second Min Method
         static int MinValue(int a, int b, int c)
         {
@@ -132,7 +134,6 @@
             }
             return result;
         }
-
         // Third Min Method
         static int MinValue(int a, int b, int c, int d)
         {
@@ -158,6 +159,17 @@
                 result = a;
             }
             return result;
+        }
+       
+        static bool TrySumIfOdd (int a, int b, out int sum) {
+            if ((a + b)%2 == 0) {
+                 sum = a + b;
+                return false;
+            }
+            else {
+                 sum = a + b;
+                return true;
+            }
         }
 }
 
